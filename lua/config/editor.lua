@@ -1,21 +1,49 @@
 local settings = {
+	autoindent = true,
 	autoread = true,
+	backspace = { "start", "eol", "indent" },
 	backup = false,
 	cmdheight = 1,
-	colorcolumn = { "120" },
+	colorcolumn = { "80", "120" },
 	completeopt = "menuone,noselect,preview",
 	conceallevel = 1,
 	cursorline = false,
 	errorbells = false,
 	expandtab = true,
 	fileencoding = "utf-8",
-	mouse = "nvi",
+	fillchars = {
+		diff = "",
+		fold = " ",
+		eob = " ",
+		horiz = "━",
+		horizup = "┻",
+		horizdown = "┳",
+		vert = "┃",
+		vertleft = "┫",
+		vertright = "┣",
+		verthoriz = "╋",
+		foldclose = "",
+		foldopen = "",
+		foldsep = " ",
+	},
+	list = true,
+	listchars = {
+		-- eol = "↲",
+		tab = "» ",
+		nbsp = "␣",
+		trail = "·",
+		extends = "→",
+		precedes = "←",
+	},
+	mouse = "a",
 	number = true,
 	numberwidth = 3,
 	pumheight = 10,
+	relativenumber = true,
 	scrolloff = 8,
 	shiftwidth = 2,
 	shortmess = "filnxtToOFWIcC",
+	showbreak = "↪",
 	showmode = true,
 	showtabline = 2,
 	sidescrolloff = 8,
@@ -41,3 +69,7 @@ local settings = {
 for setting, value in pairs(settings) do
 	vim.opt[setting] = value
 end
+
+vim.g.editorconfig = true
+vim.opt.isfname:append("@-@")
+vim.opt.clipboard:append("unnamedplus")
