@@ -47,23 +47,24 @@ return {
 				},
 				completion = {
 					menu = {
-						-- border = nil,
+						border = "rounded",
 						scrolloff = 1,
 						scrollbar = false,
 						draw = {
 							treesitter = { "lsp" },
 							columns = {
 								{ "kind_icon", gap = 1 },
-								{ "label", "label_description", gap = 1 },
+								{ "label", gap = 10 },
 								{ "kind" },
+								{ "label_description" },
 								{ "source_name" },
 							},
 						},
 					},
 					documentation = {
 						window = {
-							border = nil,
-							scrollbar = false,
+							border = "rounded",
+							scrollbar = true,
 							winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
 						},
 						auto_show = true,
