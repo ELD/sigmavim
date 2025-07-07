@@ -51,6 +51,7 @@ return {
 						scrolloff = 1,
 						scrollbar = false,
 						draw = {
+							treesitter = { "lsp" },
 							columns = {
 								{ "kind_icon", gap = 1 },
 								{ "label", "label_description", gap = 1 },
