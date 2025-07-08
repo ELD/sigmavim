@@ -39,30 +39,14 @@ return {
 					["<C-f>"] = {},
 				},
 				cmdline = {
-					enabled = false,
-					completion = {
-						documentation = {
-							auto_show = true,
-							auto_show_delay_ms = 200,
-							window = {
-								border = "solid",
-								winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
-							},
-						},
-						menu = {
-							border = "rounded",
-							draw = { gap = 2 },
-							winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
-							auto_show = true
-						},
-					},
+					enabled = true,
 					keymap = {
 						["<CR>"] = { "accept_and_enter", "fallback" },
 					},
 				},
 				completion = {
 					menu = {
-						border = "rounded",
+						border = "double",
 						scrolloff = 1,
 						scrollbar = false,
 						draw = {
@@ -78,7 +62,7 @@ return {
 					},
 					documentation = {
 						window = {
-							border = "rounded",
+							border = "double",
 							scrollbar = true,
 							winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
 						},
