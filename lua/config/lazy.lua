@@ -30,6 +30,7 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.blink" },
 		{ import = "plugins.colors" },
+		{ import = "plugins.dap" },
 		{ import = "plugins.lsp" },
 		{ import = "plugins.mini" },
 	},

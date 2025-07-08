@@ -40,7 +40,22 @@ return {
 				},
 				cmdline = {
 					enabled = false,
-					completion = { menu = { auto_show = true } },
+					completion = {
+						documentation = {
+							auto_show = true,
+							auto_show_delay_ms = 200,
+							window = {
+								border = "solid",
+								winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+							},
+						},
+						menu = {
+							border = "rounded",
+							draw = { gap = 2 },
+							winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
+							auto_show = true
+						},
+					},
 					keymap = {
 						["<CR>"] = { "accept_and_enter", "fallback" },
 					},
