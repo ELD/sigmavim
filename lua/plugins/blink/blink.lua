@@ -36,7 +36,7 @@ return {
 					},
 				},
 				keymap = {
-					["<C-f>"] = {},
+					preset = "default",
 				},
 				cmdline = {
 					enabled = true,
