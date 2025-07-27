@@ -291,6 +291,14 @@ local servers = {
 		},
 	},
 	-- }}}
+	-- ZLS {{{
+	zls = {
+		name = "zig",
+		cmd = { "zls" },
+		root_markers = { ".git" },
+		filetypes = { "zig" },
+	},
+	-- }}}
 }
 local server_names = vim.tbl_keys(servers)
 for _, server_name in ipairs(server_names) do

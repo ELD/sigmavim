@@ -21,6 +21,7 @@ return {
 			"stylua",
 			"tailwindcss",
 			"ts_ls",
+			"zls",
 		},
 		lsps = {
 			"bashls",
