@@ -10,6 +10,21 @@ return {
 						ui_select_fallback = true,
 					},
 				},
+				server = {
+					settings = {
+						["rust-analyzer"] = {
+							procMacro = {
+								enable = true,
+							},
+							cargo = {
+								features = "all",
+							},
+							lens = {
+								enable = true,
+							},
+						},
+					},
+				},
 			}
 		end,
 	},

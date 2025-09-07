@@ -4,7 +4,18 @@ return {
 		"folke/snacks.nvim",
 	},
 	opts = {
-		model_id = "claude-sonnet-4",
+		terminal = {
+			win = {
+				position = "bottom",
+			},
+		},
+		prompts = {
+			codereview = {
+				description = "Review this code for correctness, idiomaticness, and general readability",
+				prompt = "Review the following code and based on the language of the code, review its correctness, idiomaticness, readibility, and future maintainability. Key in on any code smells, maintenance red-flags, or things that may make it more difficult to extend later. Also, identify any places where the code could be made more idiomatic. Finally, do a rough performance evaluation of the code and identify easy performance wins that don't hinder readability or maintainability.",
+				key = "<leader>ocr",
+			}
+		},
 	},
 	keys = {
 		{ "<leader>oa", function() require("opencode").ask() end,                                                         desc = "Ask opencode",                    mode = { "n", "v" }, },

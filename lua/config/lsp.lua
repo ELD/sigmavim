@@ -23,8 +23,8 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.HINT] = "DiagnosticSignHint",
 		},
 	},
-	virtual_text = false,
-	virtual_lines = true,
+	-- virtual_text = { severity = { min = vim.diagnostic.severity.WARN, }, },
+	virtual_lines = { current_line = true },
 	update_in_insert = true,
 	severity_sort = true,
 	float = {
@@ -330,6 +330,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		client.server_capabilities.semanticTokensProvider = nil
+
+		vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
 
 		local kbd = vim.keymap.set
 		kbd("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Hover Documentation" })

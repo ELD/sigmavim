@@ -18,9 +18,9 @@ return {
 				strings = { "italic" },
 				variables = {},
 				numbers = {},
-				booleans = {},
+				booleans = { "bold" },
 				properties = {},
-				types = {},
+				types = { "bold" },
 				operators = {},
 			},
 			default_integrations = true,
@@ -36,6 +36,10 @@ return {
 					enabled = true,
 					indentscope_color = "",
 				},
+			},
+			float = {
+				transparent = true,
+				solid = true,
 			},
 		})
 		vim.cmd.colorscheme([[catppuccin]])

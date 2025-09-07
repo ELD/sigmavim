@@ -6,6 +6,6 @@ return {
 			-- optional configuration here
 		})
 
-		vim.cmd.colorscheme([[vague]])
+		-- vim.cmd.colorscheme([[vague]])
 	end
 }
