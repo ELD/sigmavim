@@ -22,7 +22,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]], extend_opts({ desc = "Paste without r
 vim.keymap.set("v", "p", '"_dp', opts)
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], extend_opts({ desc = "Delete without keeping contents" }))
 
-vim.keymap.set("n", "<C-c", ":nohl<CR>", extend_opts({ desc = "Clear search highlight" }))
+vim.keymap.set("n", "<C-c>", ":nohlsearch<CR>", extend_opts({ desc = "Clear search highlight" }))
 
 vim.keymap.set("n", "<leader>rf", vim.lsp.buf.format, extend_opts({ desc = "[LSP] [r]e[f]ormat code" }))
 
